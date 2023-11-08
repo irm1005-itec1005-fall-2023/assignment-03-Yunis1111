@@ -55,7 +55,12 @@
 // the function does not need to return anything
 function addToDoItem(text) {
   // Implement the logic to add a task here
-  
+   const todo = {
+    id: todoItems.length,
+    text: text,
+    completed: false,
+  };
+  todoItems.push(todo);
   console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
 

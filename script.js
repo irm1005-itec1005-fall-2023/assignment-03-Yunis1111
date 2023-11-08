@@ -55,6 +55,12 @@
 // the function does not need to return anything
 function addToDoItem(text) {
   // Implement the logic to add a task here
+  function addToDoItem(text) {
+    if (typeof text !== "string"){
+      console.log("Wrong input, please enter a string");
+      return false
+    }
+
    const todo = {
     id: todoItems.length,
     text: text,
@@ -86,6 +92,11 @@ function removeToDoItem(todoId) {
 // the function does not need to return anything
 function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
+  if (typeof todoId !== 'number'){
+    console.log("wrong input, please enter a number");
+    return false;
+  }
+
   for (let i = 0; i < todoItems.length; i++) {
     if (todoItems[i].id === todoId) {
       todoItems[i].completed = true;
@@ -102,6 +113,10 @@ function markToDoItemAsCompleted(todoId) {
 // true or false depending on whether the item was successfully deleted
 function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
+  if (typeof todoId !== 'number'){
+    console.log("wrong input, please enter a number");
+    return false;
+  }
    removeToDoItem(todoId);
   console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
@@ -111,7 +126,6 @@ function deleteToDoItem(todoId) {
 // as completed, remove it completely from the array
 function clearCompletedTasks() {
   // Implement the logic to clear completed tasks here
-
   for (let i = 0; i < todoItems.length; i++) {
     if (todoItems[i].completed === true) {
       todoItems.splice(i, 1);

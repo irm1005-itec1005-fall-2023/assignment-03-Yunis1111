@@ -127,7 +127,6 @@ function deleteToDoItem(todoId) {
     }
   }
   console.log("todoitem removed"); // Remove this line when you start working on the function
-   removeToDoItem(todoId);
   console.log("NOT YET IMPLEMENTED"); // Remove this line when you start working on the function
 }
 

@@ -79,6 +79,7 @@ function removeToDoItem(todoId) {
   for (let i = 0; i < todoItems.length; i++) {
     if (todoItems[i].id === todoId) {
       todoItems.splice(i, 1);
+      break;
     }
   }
   console.log("TodoItem removed"); // Remove this line when you start working on the function
@@ -99,6 +100,7 @@ function markToDoItemAsCompleted(todoId) {
   for (let i = 0; i < todoItems.length; i++) {
     if (todoItems[i].id === todoId) {
       todoItems[i].completed = true;
+      break;
     }
   }
   console.log("todoitem removed"); // Remove this line when you start working on the function
@@ -121,6 +123,7 @@ function deleteToDoItem(todoId) {
   for (let i = 0; i < todoItems.length; i++) {
     if (todoItems[i].id === todoId) {
       todoItems.splice(i, 1);
+      break;
     }
   }
   console.log("todoitem removed"); // Remove this line when you start working on the function
